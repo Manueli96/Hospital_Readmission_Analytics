@@ -5,6 +5,16 @@ It ingests raw patient data into Snowflake, transforms it into a clean star sche
 
 ---
 
+## 🔎 Executive Summary
+
+Hospital readmissions are a critical challenge for healthcare providers, driving up costs and impacting patient outcomes.  
+This project builds a **modern data pipeline** that ingests raw hospital visit records into Snowflake, transforms them with dbt, automates refreshes with Airflow, and delivers **Power BI dashboards** for hospital leadership.  
+
+On top of the pipeline, we developed predictive models to identify patients at high risk of 30-day readmission.  
+The solution combines **data engineering, analytics, and machine learning** in a single portfolio project, showing how modern data stack tools can deliver both **operational efficiency** and **business insights**.
+
+---
+
 ## 🎯 Goals
 - Automate ingestion → Snowflake  
 - Transform into clean star schema → dbt  
@@ -26,13 +36,13 @@ It ingests raw patient data into Snowflake, transforms it into a clean star sche
 
 ## 📂 Repository Structure
 Hospital_Readmission_Analytics/
-├── python_scripts/ # Cleaning + Modeling notebooks
-├── snowflake/ # Setup & ingestion SQL
-├── documentation/ # Phase-wise notes & lessons learned
-├── dashboards/ # Power BI dashboard
-├── data/ # Raw & cleaned CSVs
-├── diagrams/ # ERD, pipeline, Snowflake & dbt screenshots
-└── references/ # Original project plan & notes
+├── python_scripts/     # Cleaning + Modeling notebooks
+├── snowflake/          # Setup & ingestion SQL
+├── documentation/      # Phase-wise notes & lessons learned
+├── dashboards/         # Power BI dashboard
+├── data/               # Raw & cleaned CSVs
+├── diagrams/           # ERD, pipeline, Snowflake & dbt screenshots
+└── references/         # Original project plan & notes
 
 yaml
 Copy code
@@ -84,12 +94,40 @@ KPIs:
 
 ---
 
+## 📊 Predictive Modeling Summary
+
+In addition to pipeline engineering, we trained machine learning models on the transformed dataset (~102K encounters).  
+Our goal: predict whether a patient would be **readmitted within 30 days**.
+
+- **Baseline models** (Logistic Regression, Random Forest) were weak (AUC ~0.55).  
+- **Enriched dataset** with diagnoses, labs, and medications improved Logistic Regression to AUC ~0.67.  
+- **Best model:**  
+  - **XGBoost (reduced features, class weighting, hyperparameter tuning)**  
+  - **ROC-AUC ~0.687** on the test set  
+  - **Recall prioritized** over precision → aligned with healthcare need to flag as many at-risk patients as possible.  
+- **Explainability with SHAP & EBM** confirmed key drivers: discharge disposition, age group, diagnosis categories, number of medications.  
+
+⚡ **Key takeaway:** While multiple boosting models (LightGBM, CatBoost) performed similarly, **tuned XGBoost offered the best balance of accuracy and clinical interpretability**.
+
+---
+
 ## 🚀 Results
-- ~102,000 hospital encounters processed  
-- **Star schema** created: `dim_patients`, `dim_diagnosis`, `dim_admission`, `fact_visits`  
-- dbt lineage graph & docs for transparency  
-- Automated daily pipeline with Airflow DAG  
-- Dashboard surfaced KPIs for hospital leadership  
+
+- **Data Pipeline:** Successfully ingested and processed ~102,000 hospital encounters into Snowflake.  
+- **Data Modeling:** Designed a robust **star schema** (`fact_visits`, `dim_patients`, `dim_diagnosis`, `dim_admission`) to power analytics.  
+- **Transformations:** dbt lineage graph and documentation provided full transparency and governance across 10+ models and 40+ tests.  
+- **Orchestration:** Automated daily refresh with Airflow DAGs ensured reproducibility and near real-time insights.  
+- **Predictive Modeling:**  
+  - Best model → **XGBoost (reduced features, weighted, hyperparameter tuned)**  
+  - Achieved **ROC-AUC ~0.687**, with recall prioritized to catch more high-risk patients.  
+- **Dashboards:** Delivered **Power BI executive dashboard** for hospital leadership, surfacing:  
+  - Readmission rates by diagnosis, age, and admission type  
+  - Average stay duration (readmitted vs non-readmitted)  
+  - Patient volume trends over time  
+  - Top diagnoses linked to frequent readmissions  
+
+⚡ **Impact:** This pipeline demonstrates how modern data engineering + ML workflows can help hospitals **reduce readmission costs, improve patient care, and highlight data quality gaps**.
+
 
 ---
 
