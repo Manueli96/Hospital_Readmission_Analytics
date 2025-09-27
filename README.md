@@ -34,25 +34,6 @@ The solution combines **data engineering, analytics, and machine learning** in a
 
 ---
 
-## 📂 Repository Structure
-
-"```"
-Hospital_Readmission_Analytics/
-├── python_scripts/     # Cleaning + Modeling notebooks
-├── snowflake/          # Setup & ingestion SQL
-├── documentation/      # Phase-wise notes & lessons learned
-├── dashboards/         # Power BI dashboard
-├── data/               # Raw & cleaned CSVs
-├── diagrams/           # ERD, pipeline, Snowflake & dbt screenshots
-└── references/         # Original project plan & notes
-"```"
-
-
-yaml
-Copy code
-
----
-
 ## 🔗 Related Repositories
 - **dbt Models:** [Hospital_Readmission_dbt](https://github.com/srilekhatv/Hospital_Readmission_dbt)  
 - **Airflow Orchestration:** [Hospital_Readmission_AirflowOrchestration](https://github.com/srilekhatv/Hospital_Readmission_AirflowOrchestration)  
@@ -90,11 +71,20 @@ Copy code
 **Power BI Executive Summary**
 ![Dashboard](dashboards/powerbi_dashboard.PNG)
 
-KPIs:  
-- Readmission rate by diagnosis, age, admission type  
-- Avg stay duration (readmitted vs not)  
-- Patient volume trends  
-- Common diagnoses for readmission  
+Key KPIs:
+- **Readmission Rate (30 Days):** 11% of encounters
+- **Average Length of Stay:** 4.4 days
+- **Total Encounters:** 102K
+- **Unique Patients:** 72K
+
+Breakdowns visualized:
+- **Readmission Rate by Age Group:** highest in 20–30 years, lowest in 0–10 years
+- **Readmission Rate by Gender & Race:** comparison across Male, Female, and Unknown
+- **Encounter Distribution by Admission Type:**  
+  - Emergency (53.05%)  
+  - Elective (18.54%)  
+  - Urgent (18.16%)  
+  - Other categories (Unknown, Not Available, Not Mapped)  
 
 ---
 
