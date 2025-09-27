@@ -32,39 +32,6 @@ The solution combines **data engineering, analytics, and machine learning** in a
 - **Scripting:** Python + Snowflake Connector  
 - **Version Control:** GitHub  
 
-## 📂 Repository Structure
-
-.
-├── dashboards/            # Power BI dashboards
-│   └── powerbi_dashboard.pbix
-├── data/                  # Raw & cleaned datasets
-│   ├── diabetic_data.csv
-│   ├── clean_diabetic_data.csv
-│   └── daily_chunks/
-├── diagrams/              # ERD, pipeline, Snowflake & dbt screenshots
-│   ├── snowflake/
-│   │   ├── snowflake_table.PNG
-│   │   ├── snowflake_analytics.PNG
-│   │   ├── snowflake_database.PNG
-│   │   ├── snowflake_dev_schema.PNG
-│   │   └── snowflake_stage.PNG
-│   └── dbt/
-│       ├── dbt_lineage.png
-│       ├── factvisits_lineage.png
-│       └── dbt.png
-├── documents/             # Phase-wise notes & lessons learned
-│   └── Documentation.md
-├── logs/                  # Orchestration / execution logs
-│   └── dbt.log
-├── python_scripts/        # Data cleaning + modeling notebooks
-│   ├── Data Cleaning.ipynb
-│   └── Hospital_Readmission.ipynb
-├── references/            # Original project plan & notes
-│   └── description.pdf
-└── snowflake/             # Setup & ingestion SQL
-    └── Hospital Readmission Analytics.sql
-
-
 ---
 
 ## 🔗 Related Repositories
