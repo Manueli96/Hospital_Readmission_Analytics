@@ -35,6 +35,8 @@ The solution combines **data engineering, analytics, and machine learning** in a
 ---
 
 ## 📂 Repository Structure
+
+"```"
 Hospital_Readmission_Analytics/
 ├── python_scripts/     # Cleaning + Modeling notebooks
 ├── snowflake/          # Setup & ingestion SQL
@@ -43,6 +45,8 @@ Hospital_Readmission_Analytics/
 ├── data/               # Raw & cleaned CSVs
 ├── diagrams/           # ERD, pipeline, Snowflake & dbt screenshots
 └── references/         # Original project plan & notes
+"```"
+
 
 yaml
 Copy code
@@ -84,7 +88,7 @@ Copy code
 ## 📈 Dashboard Preview
 
 **Power BI Executive Summary**
-![Dashboard](dashboards/powerbi_dashboard.png)
+![Dashboard](dashboards/powerbi_dashboard.PNG)
 
 KPIs:  
 - Readmission rate by diagnosis, age, admission type  
